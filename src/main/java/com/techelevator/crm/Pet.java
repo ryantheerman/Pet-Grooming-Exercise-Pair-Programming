@@ -17,7 +17,15 @@ public class Pet {
         vaccination.add("Rabies");
         vaccination.add("Distemper");
         vaccination.add("Parvo");
-        return vaccination;
+        String output = "";
+        for (int i = 0; i < vaccination.size(); i++) {
+            if (i < vaccination.size() - 1) {
+                output = output + vaccination.get(i) + ", ";
+            } else {
+                output = output + vaccination.get(i);
+            }
+        }
+        return output;
     }
 
     public String getName() {
