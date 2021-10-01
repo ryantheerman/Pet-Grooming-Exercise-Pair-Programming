@@ -18,4 +18,5 @@ public class Manager extends Employee {
 
         return newEmployee;
     }
+
 }
