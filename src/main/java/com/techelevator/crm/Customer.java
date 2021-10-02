@@ -18,8 +18,19 @@ public class Customer extends Person implements Billable {
     }
 
     public Customer(String firstName, String lastName) {
+        super(firstName, lastName);
         new Customer(firstName, lastName, "");
+        this.phoneNumber = "";
     }
+
+    public double getBalanceDue(Map<String, Double> servicesRendered) {
+        double totalCost = 0.0;
+        for (String service : servicesRendered.keySet()) {
+            totalCost = totalCost + servicesRendered.get(service);
+        }
+        return totalCost;
+    }
+
 
     public String getPhoneNumber() {
         return phoneNumber;
@@ -37,8 +48,5 @@ public class Customer extends Person implements Billable {
         this.pets = pets;
     }
 
-    @Override
-    public double getBalanceDue(Map<String, Double> servicesRendered) {
-        return 0;
-    }
+
 }
