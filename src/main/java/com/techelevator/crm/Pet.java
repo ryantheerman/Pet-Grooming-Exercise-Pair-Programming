@@ -11,6 +11,15 @@ public class Pet {
     public Pet(String name, String species) {
         this.name = name;
         this.species = species;
+        vaccination.add("Rabies");
+        vaccination.add("Distemper");
+        vaccination.add("Parvo");
+    }
+
+    public Pet() {
+        vaccination.add("Rabies");
+        vaccination.add("Distemper");
+        vaccination.add("Parvo");
     }
 
     public String listVaccinations(){
