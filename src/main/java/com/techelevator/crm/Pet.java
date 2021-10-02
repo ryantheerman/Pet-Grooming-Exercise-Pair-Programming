@@ -14,9 +14,6 @@ public class Pet {
     }
 
     public String listVaccinations(){
-        vaccination.add("Rabies");
-        vaccination.add("Distemper");
-        vaccination.add("Parvo");
         String output = "";
         for (int i = 0; i < vaccination.size(); i++) {
             if (i < vaccination.size() - 1) {

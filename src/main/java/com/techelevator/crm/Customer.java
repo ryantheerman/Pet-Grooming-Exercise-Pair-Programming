@@ -19,6 +19,7 @@ public class Customer extends Person implements Billable {
 
     public Customer(String firstName, String lastName) {
         super(firstName, lastName);
+        new Customer(firstName, lastName, "");
         this.phoneNumber = "";
     }
 
@@ -46,4 +47,6 @@ public class Customer extends Person implements Billable {
     public void setPets(List<String> pets) {
         this.pets = pets;
     }
+
+
 }
